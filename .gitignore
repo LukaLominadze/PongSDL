@@ -1,5 +1,5 @@
 # Visual Studio files
-.vs
+.vs/
 PongRemake/PongRemake.vcxproj
 PongRemake/PongRemake.vcxproj.filters
 PongRemake/PongRemake.vcxproj.user
