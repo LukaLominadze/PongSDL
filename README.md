@@ -10,7 +10,7 @@ It is recommended to use Visual Studio 2020-2022 with this project, but you are 
 ### 1. Download the repository:
 Start by cloning the repository with 
 ```cmd
-git clone https://github.com/LukaLominadze/PongSDL Git
+git clone https://github.com/LukaLominadze/PongSDL
 ```
 
 ### 2. Building with premake:
