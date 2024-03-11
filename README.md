@@ -2,7 +2,7 @@
 A recreation of the classic game of Pong in C++ using SDL2.
 ![image](https://github.com/LukaLominadze/PongSDL/assets/142942110/b14683b6-e745-411d-93b3-ad4a78a62491)
 
-This project is served as an exercise of developing applications with an OOP nature. The concept of a game is perfect for execises like these, since it requires a lot of different kinds of features to come together for a game to function.
+This project is served as an exercise of developing applications with an OOP nature. The concept of a game is perfect for execises like these, since it requires a lot of different kinds of features to come together for the application to function.
 
 ## Getting Started
 It is recommended to use Visual Studio 2020-2022 with this project, but you are free to use any IDE for this.
