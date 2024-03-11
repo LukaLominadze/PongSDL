@@ -22,7 +22,9 @@ By running the cmd in the cloned repository, run the command:
 premake5 [action]
 ```
 Where action specifies the IDE which this project file will be generated for, for example:
-'premake5 vs2022'
+```cmd
+premake5 vs2022
+```
 Refer to this link for a list of project files that can be created with premake: https://premake.github.io/docs/Using-Premake
 
 if your IDE is not listed in the list, you can simply generate a makefile with premake:
