@@ -1,9 +1,0 @@
-# Visual Studio files
-.vs/
-bin/
-bin-int/
-x64/
-PongRemake/PongRemake.vcxproj
-PongRemake/PongRemake.vcxproj.filters
-PongRemake/PongRemake.vcxproj.user
-PongRemake/SDL2.dll
