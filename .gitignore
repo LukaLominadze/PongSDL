@@ -6,9 +6,9 @@ PongRemake/PongRemake.vcxproj.user
 PongRemake/SDL2.dll
 
 # Build directories
-bin/
-bin-int/
-x64/
+/PongRemake/bin/
+/PongRemake/bin-int/
+/PongRemake/x64/
 
 # Solution file
 PongRemake.sln
