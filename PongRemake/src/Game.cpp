@@ -2,7 +2,9 @@
 
 Game::Game(const char* title, Vector2 screenSize, Uint32 FLAGS)
 {
-	p_window = new Window(title, screenSize, FLAGS);
+	this->screenSize = screenSize;
+
+	p_window = new Window(title, this->screenSize, FLAGS);
 
 	keystate = SDL_GetKeyboardState(NULL);
 }
@@ -25,8 +27,8 @@ void Game::Run()
 
 		player1.Movement(keystate, SDL_SCANCODE_W, SDL_SCANCODE_S, 10);
 		player2.Movement(keystate, SDL_SCANCODE_UP, SDL_SCANCODE_DOWN, 10);
-		player1.ClampPosition(600, 600);
-		player2.ClampPosition(600, 600);
+		player1.ClampPosition(screenSize.x, screenSize.y);
+		player2.ClampPosition(screenSize.x, screenSize.y);
 
 		ball.MoveBall();
 		ball.Collision(&player1, &player2);

@@ -7,5 +7,4 @@ PongRemake/PongRemake.vcxproj
 PongRemake/PongRemake.vcxproj.filters
 PongRemake/PongRemake.vcxproj.user
 PongRemake/SDL2.dll
-vendor/bin/
 PongRemake.sln

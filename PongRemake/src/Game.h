@@ -16,5 +16,6 @@ private:
 	Window* p_window;
 	SDL_Event event{};
 	const Uint8* keystate;
+	Vector2 screenSize;
 };
 
