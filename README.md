@@ -15,7 +15,7 @@ git clone https://github.com/LukaLominadze/PongSDL
 
 ### 2. Building with premake:
 After cloning the repository, open the "premake5.bat" from the main directory. You will see the list of build options in the command prompt, input the one you need to proceed:
-![image](https://github.com/LukaLominadze/PongSDL/assets/142942110/8b66d81b-ef8d-4ba9-9b10-f40a836fd2da)
+![image](https://github.com/LukaLominadze/PongSDL/assets/142942110/5c6a2334-fbde-451f-bcfa-c0c9bfac9eb8)
 
 if your IDE is not listed in the list, you can simply generate a makefile with premake:
 ```cmd
