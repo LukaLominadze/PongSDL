@@ -1,4 +1,4 @@
-workspace "NigoziEngine"
+workspace "PongRemake"
 	configurations {
 		"Debug",
 		"Release"
@@ -8,16 +8,16 @@ workspace "NigoziEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
-project "NigoziEngine"
-	location "NigoziEngine"
-	kind "SharedLib"
+project "PongRemake"
+	location "PongRemake"
+	kind "ConsoleApp"
 
 	language "C++"
 
 	targetdir ("bin/" ..outputdir.. "/%{prj.name}")
 	objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
 
-	defines { "NG_PLATFORM_WINDOWS", "NG_BUILD_DLL"}
+	defines { "_CONSOLE" }
 	
 	files {
 		"%{prj.name}/src/**.h",
@@ -29,10 +29,11 @@ project "NigoziEngine"
 		["Header Files"] = "%{prj.name}/src/**.h"
 	}
 
-	includedirs { "%{prj.name}/src/" }
+	includedirs { "%{wks.location}/vendor/SDL2/include" }
+	libdirs { "%{wks.location}/vendor/SDL2/lib/x64/" }
 
-	pchheader "ngpch.h"
-	pchsource "ngpch.cpp"
+	links { "SDL2.lib",
+			"SDL2main.lib"}
 
 	configurations {
 		"Debug",
@@ -45,7 +46,7 @@ project "NigoziEngine"
 		systemversion "latest"
 
 		postbuildcommands{
-			"{COPYFILE} %[%{wks.location}/bin/" ..outputdir.. "/%{prj.name}/NigoziEngine.dll] %[%{wks.location}/bin/" ..outputdir.. "/Sandbox/]"
+			"{COPYFILE} %[%{wks.location}/vendor/SDL2/lib/x64/SDL2.dll] %[%{wks.location}/bin/" ..outputdir.. "/%{prj.name}]"
 		}
 
 	filter "configurations:Debug"
