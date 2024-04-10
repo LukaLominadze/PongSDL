@@ -17,7 +17,7 @@ project "PongRemake"
 	targetdir ("bin/" ..outputdir.. "/%{prj.name}")
 	objdir ("bin-int/" ..outputdir.. "/%{prj.name}")
 
-	defines { "_DEBUG", "_CONSOLE" }
+	defines { "_CONSOLE" }
 
 	files {
 		"%{prj.name}/src/**.h",
@@ -39,8 +39,8 @@ project "PongRemake"
 	}
 
 	configurations {
-		"Debug32",
-		"Release32"
+		"Debug",
+		"Release"
 	}
 
 	filter "system:windows"
@@ -53,9 +53,15 @@ project "PongRemake"
 		}
 
 	filter "configurations:Debug"
+
+		defines { "_DEBUG" }
+
 		architecture "x64"
 		symbols "On"
 
 	filter "configurations:Release"
+
+		defines { "NDEBUG" }
+
 		architecture "x64"
 		optimize "On"
