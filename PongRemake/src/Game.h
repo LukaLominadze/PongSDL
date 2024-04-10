@@ -18,4 +18,3 @@ private:
 	const Uint8* keystate;
 	Vector2 screenSize;
 };
-
